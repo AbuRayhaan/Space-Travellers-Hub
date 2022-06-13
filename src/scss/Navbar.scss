@@ -1,0 +1,26 @@
+//   display: flex;
+
+.d-flex {
+  display: flex;
+}
+
+header {
+  padding: 10px;
+  border-bottom: 1px solid rgb(197, 197, 197);  
+}
+
+.navbar {
+  justify-content: space-between;
+}
+
+.navTitle {
+  flex-direction: row;
+  gap: 20PX;
+  margin-left: 50px;
+}
+
+
+.navMenu {
+  margin-right: 80px;
+  gap: 20px;
+}
