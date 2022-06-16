@@ -1,11 +1,12 @@
 import React, { useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
+import { FetchRockets } from './redux/rocket/rocketSlice'
+import { useDispatch } from 'react-redux';
 import Navbar from './components/rocket/Navbar';
 import Rocket from './pages/Rocket';
 import Mission from './pages/Mission';
 import MyProfile from './pages/Profile';
-import { FetchRockets } from './redux/rocket/rocketSlice'
-import { useDispatch } from 'react-redux';
+import Footer from './components/Footer'
 
 function App() {
   const dispatch = useDispatch();
@@ -24,6 +25,7 @@ function App() {
           <Route path="profile" element={<MyProfile />} />
         </Routes>
       </main>
+      <Footer />
     </>
   );
 }
