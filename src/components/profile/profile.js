@@ -24,18 +24,6 @@ const Profile = () => {
         </table>
       </div>
       <RocketsReserved />
-      {/* <div className={styles.box}>
-        <h2 className="title">My Dragons</h2>
-        <table className="Mission-ProfileTable">
-          <tbody>
-            {reservedDragons.map((dragon) => (
-              <tr key={dragon.id}>
-                <td className={styles['title-entry']}>{dragon.name}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div> */}
     </div>
   );
 };
