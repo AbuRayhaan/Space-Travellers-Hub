@@ -13,16 +13,16 @@ function Navbar() {
           </div>
 
           <div className="navMenu d-flex">
-            <NavLink to="/" className="rocket">
+            <NavLink to="/" className={({isActive})=> (isActive ? 'rocket active': 'rocket link')}>
               <span>Rockets</span>
             </NavLink>
 
-            <NavLink to="mission" className="rocket">
+            <NavLink to="mission" className={({isActive})=> (isActive ? 'rocket active': 'rocket link')}>
               <span>Mission</span>
             </NavLink>
             {' '}
             |
-            <NavLink to="profile" className="rocket">
+            <NavLink to="profile" className={({isActive})=> (isActive ? 'rocket active': 'rocket link')}>
               <span>My Profile</span>
             </NavLink>
           </div>
