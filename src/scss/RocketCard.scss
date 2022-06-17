@@ -1,0 +1,59 @@
+.d-flex {
+  display: flex;
+}
+
+.rocketCard {
+  gap: 20px;
+}
+
+.rocketImage {
+  width: 220px;
+}
+
+.rocketInfo {
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.rocketTitle {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.rocketDetails {
+  font-size: 16px;
+}
+
+button {
+  background-color: rgb(75, 75, 247);
+  border: none;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.cancel-reserve {
+  background: white;
+  color: rgb(131, 131, 131);
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid rgb(7, 7, 7);
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.mini-btn {
+  background: #1083fd;
+  color: white;
+  border-radius: 4px;
+  margin-right: 5px;
+  padding: 4px;
+}
+
+@media screen and (max-width: 768px) {
+  .rocketCard {
+    flex-direction: column;
+  }
+}
