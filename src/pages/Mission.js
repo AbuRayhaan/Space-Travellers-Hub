@@ -6,5 +6,5 @@ function Mission() {
     <MissionTable />
   );
 }
-  
+
 export default Mission;

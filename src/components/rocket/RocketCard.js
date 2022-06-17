@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react';
-import { FetchRockets, reserveRocket, cancelReserve } from '../../redux/rocket/rocketSlice';
+import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
-import '../../scss/RocketCard.scss'
+import { FetchRockets, reserveRocket, cancelReserve } from '../../redux/rocket/rocketSlice';
+import '../../scss/RocketCard.css';
 
 function RocketCard({ rocket }) {
   const rocketsinfo = useSelector((state) => state.rocketsReducer);
@@ -25,42 +26,52 @@ function RocketCard({ rocket }) {
     getRockets();
   }, []);
 
-  return(
+  return (
     <section>
-      <div className='rocketCard d-flex'>
-        <div className='rocketImage'>
-          <img src={rocket.rocket_img} alt ={rocket.rocket_name} className='rocketImage'/>
+      <div className="rocketCard d-flex">
+        <div className="rocketImage">
+          <img src={rocket.rocket_img} alt={rocket.rocket_name} className="rocketImage" />
         </div>
 
-        <div className='rocketInfo d-flex'>
-          <span className='rocketTitle'>{rocket.rocket_name}</span>
-          <p className='rocketDetail'>
-            {rocket.reserved ? (<span className='mini-btn'>Reserved</span>) : (false)}
+        <div className="rocketInfo d-flex">
+          <span className="rocketTitle">{rocket.rocket_name}</span>
+          <p className="rocketDetail">
+            {rocket.reserved ? (<span className="mini-btn">Reserved</span>) : (false)}
             {rocket.rocket_description}
           </p>
 
           {rocket.reserved ? (
-            <button 
+            <button
               onClick={() => cancelBooking(rocket.rocket_id)}
-              type='button'
-              className='cancel-reserve'
+              type="button"
+              className="cancel-reserve"
             >
               Cancel Reservation
             </button>
           ) : (
-            <button 
+            <button
               onClick={() => rocketBooking(rocket.rocket_id)}
-              type='button'
-              className='rocket-btn'
-          >
-            Reserve Rocket
-          </button>
+              type="button"
+              className="rocket-btn"
+            >
+              Reserve Rocket
+            </button>
           )}
         </div>
 
       </div>
     </section>
-  )
+  );
 }
+
+RocketCard.propTypes = {
+  rocket: PropTypes.shape({
+    rocket_id: PropTypes.string,
+    rocket_name: PropTypes.string,
+    reserved: PropTypes.string,
+    rocket_description: PropTypes.string,
+    rocket_img: PropTypes.number,
+  }).isRequired,
+};
 
 export default RocketCard;

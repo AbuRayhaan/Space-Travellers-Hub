@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { FetchMissions, toggleMission } from '../../redux/mission/missionSlice';
-import '../../scss/MissionCard.scss';
+import '../../scss/MissionCard.css';
 import styles from './MissionCard.module.css';
 
 let fetched = false;
@@ -22,9 +22,9 @@ function MissionCard() {
     dispatch(toggleMission(buttonId));
   };
 
-    return (
-      <table className='missionCard'>
-        <tbody>
+  return (
+    <table className="missionCard">
+      <tbody>
         <tr>
           <th>Mission</th>
           <th>Description</th>
@@ -34,25 +34,25 @@ function MissionCard() {
         {missionsState.map(
           ({
             mission_name: missionName,
-            mission_id,
+            mission_id: id,
             description,
             reserved,
           }) => (
-            <tr key={mission_id}>
-              <td className='missionName'>{missionName}</td>
+            <tr key={id}>
+              <td className="missionName">{missionName}</td>
               <td>{description}</td>
-              <td className='status'>
+              <td className="status">
                 <p
                   className={reserved ? styles.missionReserved : styles.notReserved}
                 >
                   {reserved ? 'ACTIVE MEMBER' : 'NOT A MEMBER'}
                 </p>
               </td>
-              <td key={mission_id} className='status'>
+              <td key={id} className="status">
                 <button
                   className={reserved ? styles.leave : styles.join}
-                  data-target={mission_id}
-                  key={mission_id}
+                  data-target={id}
+                  key={id}
                   type="button"
                   onClick={clickHandler}
                 >
@@ -63,8 +63,8 @@ function MissionCard() {
           ),
         )}
       </tbody>
-      </table>
-    );
+    </table>
+  );
 }
 
 export default MissionCard;

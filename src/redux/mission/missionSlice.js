@@ -33,11 +33,11 @@ const reducer = (state = initialState, action) => {
         ...state,
         missions: state.missions.map((mission) => {
           if (mission.mission_id === action.payload) {
-            return { ...mission, reserved: !mission.reserved }
+            return { ...mission, reserved: !mission.reserved };
           }
           return mission;
-        })
-      }
+        }),
+      };
 
     default:
       return state;

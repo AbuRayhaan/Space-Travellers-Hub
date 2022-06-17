@@ -16,7 +16,7 @@ const Profile = () => {
         <table className={styles['Mission-ProfileTable']}>
           <tbody>
             {joinedMissions.map((mission) => (
-                <tr key={mission.mission_id}>
+              <tr key={mission.mission_id}>
                 <td className={styles['title-entry']}>{mission.mission_name}</td>
               </tr>
             ))}

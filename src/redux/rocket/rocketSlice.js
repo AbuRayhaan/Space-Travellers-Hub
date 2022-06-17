@@ -2,7 +2,6 @@ const ADD_ROCKET = 'space-travellers-hub/redux/rocket/ADD_TICKET';
 const RESERVE_ROCKET = 'space-travellers-hub/redux/rocket/RESERVE_TICKET';
 const CANCEL_RESERVATION = 'space-travellers-hub/redux/rocket/CANCEL_RESERVATION';
 
-
 const initialState = [];
 const url = 'https://api.spacexdata.com/v3/rockets';
 

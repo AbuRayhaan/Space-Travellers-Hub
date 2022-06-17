@@ -1,13 +1,11 @@
-import React, { useEffect } from 'react';
-import MissionCard from './MissionCard'
-import '../../scss/MissionTable.scss';
+import React from 'react';
+import MissionCard from './MissionCard';
+import '../../scss/MissionTable.css';
 
-const Mission = () => {
-  return (
-    <div className='missionTable'>
-      <MissionCard />
-    </div>
-  );
-};
+const Mission = () => (
+  <div className="missionTable">
+    <MissionCard />
+  </div>
+);
 
 export default Mission;
