@@ -11,9 +11,9 @@ This is my Leaderboard project in the Microverse curriculum.
 - JSX
 - REACT-ROUTER-DOM
  
-<!-- ## Live Demo
+## Live Demo
 
-[Live Demo Link](https://aburayhaan.github.io/Bookstore/) -->
+[Live Demo Link](https://space-traveller-app.netlify.app/)
 
 ## Getting Started
 
