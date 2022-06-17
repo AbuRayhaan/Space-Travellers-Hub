@@ -9,7 +9,7 @@ function Navbar() {
       <div className="navbar d-flex">
         <div className="navTitle d-flex">
           <img src={logo} alt="logo" className="logo" />
-          <h1>Space Travelers&apos Hub</h1>
+          <h1>Space Travelers Hub</h1>
         </div>
 
         <div className="navMenu d-flex">
