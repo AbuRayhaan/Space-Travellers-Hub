@@ -1,6 +1,6 @@
 import React from 'react';
 import MissionCard from './MissionCard';
-import '../../scss/MissionTable.css';
+import '../../scss/MissionTable.scss';
 
 const Mission = () => (
   <div className="missionTable">

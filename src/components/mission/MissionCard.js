@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { FetchMissions, toggleMission } from '../../redux/mission/missionSlice';
-import '../../scss/MissionCard.css';
+import '../../scss/MissionCard.scss';
 import styles from './MissionCard.module.css';
 
 let fetched = false;
